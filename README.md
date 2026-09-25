@@ -1,5 +1,7 @@
 # Personal Quant Research
 
+[![Research quality](https://github.com/grisheet/personal-quant-research/actions/workflows/ci.yml/badge.svg)](https://github.com/grisheet/personal-quant-research/actions/workflows/ci.yml)
+
 **A small, auditable operating system for systematic equity research.**
 
 Point-in-time data contracts · transparent signals · self-financing backtests · reproducible reports
@@ -19,6 +21,7 @@ On a Mac with Homebrew:
 
 ```bash
 brew install uv
+git clone https://github.com/grisheet/personal-quant-research.git
 cd personal-quant-research
 uv sync --frozen
 uv run pqr demo --output runs/verification
@@ -117,9 +120,9 @@ missing held quotes, price-history gaps, drift, execution timing, buy/sell costs
 terminal settlement, split/dividend accounting, hand-calculated metrics, and exact numeric replay.
 A separate scalar oracle checks the vectorized engine using property-based scenarios.
 
-GitHub Actions is configured for Python 3.12 on Ubuntu and macOS. Those remote jobs have not run
-until the repository is pushed; the included validation record distinguishes local execution from
-planned CI. See [validation](docs/validation.md).
+GitHub Actions runs the locked environment, lint, formatting, type checks, tests, package build,
+offline demo, and artifact verification on Python 3.12 on Ubuntu and macOS. The badge links to
+current results. See the dated [validation record](docs/validation.md).
 
 ## Repository map
 

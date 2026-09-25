@@ -11,10 +11,12 @@
 - Added deterministic offline verification, experiment manifests and output checksum verification.
 - Added a portable HTML research notebook, method/data/risk documentation and CI configuration.
 - Validated against hand calculations, an independent scalar ledger, and leakage/regression tests.
+- Published the public GitHub repository, with Linux/macOS CI and the original build history
+  preserved as a release bundle for report provenance.
 
 ### Known limits
 
 Bundled results use artificial test fixtures, not market data. Live provider entitlement and coverage
-remain unverified. Public GitHub publication requires authenticated access. macOS CI is configured
-but unexecuted until a push. Complex corporate transformations and formal factor regression are not
+remain unverified. See the dated validation record and GitHub Actions for executed CI checks.
+Complex corporate transformations and formal factor regression are not
 implemented. Vendor data is not licensed by the code's MIT license.
