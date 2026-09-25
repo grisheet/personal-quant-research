@@ -1,0 +1,17 @@
+name = "Momentum + quality / verification"
+mode = "demonstration"
+start = "2020-01-02"
+end = "2025-12-31"
+initial_nav = 100000
+min_price = 5
+min_dollar_volume = 10000000
+liquidity_window = 60
+momentum_lookback = 252
+momentum_skip = 21
+max_fact_age_days = 550
+top_fraction = 0.2
+max_weight = 0.1
+commission_bps = 1
+slippage_bps = 5
+periods_per_year = 252
+seed = 42
