@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "personal-quant-research"
+version = "0.1.0"
+description = "Auditable, point-in-time equity research. Hypothetical educational software."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = [
+  "numpy==2.3.5", "pandas==2.3.3", "pyarrow==23.0.1", "duckdb==1.5.5",
+  "httpx[socks]==0.28.1", "pydantic==2.13.5", "pydantic-settings==2.15.0",
+  "typer==0.27.2", "exchange-calendars==4.13.2", "structlog==26.1.0",
+  "jinja2==3.1.6", "matplotlib==3.11.2"
+]
+
+[project.scripts]
+pqr = "pqr.cli:app"
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "pytest-cov==7.1.0", "hypothesis==6.168.1", "ruff==0.16.9", "mypy==1.20.2", "respx==0.23.1", "pandas-stubs==2.3.3.260113", "build==1.6.1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pqr"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["pqr"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
