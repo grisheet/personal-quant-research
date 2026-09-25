@@ -1,0 +1,53 @@
+{
+  "Benchmark": {
+    "annualized_turnover": 0.16700854818673783,
+    "annualized_volatility": 0.12877043698907517,
+    "cagr": -0.10496891903146299,
+    "calmar": -0.20206959542392502,
+    "cost_usd": 59.96402158704777,
+    "hit_rate": 0.496684350132626,
+    "max_drawdown": 0.5194691403783287,
+    "mean_gross_exposure": 1.0,
+    "mean_net_exposure": 1.0,
+    "sessions": 1508,
+    "sharpe": -0.7986921008850696,
+    "sortino": -1.072653882008139,
+    "total_half_turnover": 0.4997001798920648,
+    "total_return": -0.48584432736597793,
+    "total_turnover": 0.9994003597841296
+  },
+  "Equal weight": {
+    "annualized_turnover": 0.4743121216412978,
+    "annualized_volatility": 0.09418044868118847,
+    "cagr": -0.08111219059244057,
+    "calmar": -0.18939172783117825,
+    "cost_usd": 158.04717990137107,
+    "hit_rate": 0.48143236074270557,
+    "max_drawdown": 0.42827736734490907,
+    "mean_gross_exposure": 1.0,
+    "mean_net_exposure": 1.0,
+    "sessions": 1508,
+    "sharpe": -0.8531145465269229,
+    "sortino": -1.1439369261659158,
+    "total_half_turnover": 1.4191719830061054,
+    "total_return": -0.3979601617185242,
+    "total_turnover": 2.8383439660122107
+  },
+  "Strategy": {
+    "annualized_turnover": 2.008370047900687,
+    "annualized_volatility": 0.04232466755162316,
+    "cagr": -0.0234669117613594,
+    "calmar": -0.11046340688523948,
+    "cost_usd": 708.358847099309,
+    "hit_rate": 0.4927055702917772,
+    "max_drawdown": 0.21244059388589376,
+    "mean_gross_exposure": 0.3993116692792642,
+    "mean_net_exposure": 0.3993116692792642,
+    "sessions": 1508,
+    "sharpe": -0.5412384878867167,
+    "sortino": -0.7364702579188122,
+    "total_half_turnover": 6.009170698877453,
+    "total_return": -0.1327667965356344,
+    "total_turnover": 12.018341397754906
+  }
+}
