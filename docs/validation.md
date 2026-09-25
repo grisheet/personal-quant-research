@@ -24,6 +24,29 @@ The prebuilt report is generated from the source commit recorded in its own mani
 commit may add the report files without changing the generating source. The bundled report's run ID
 need not match a fresh run after another Git commit; compare numeric outputs and source/data hashes.
 
+## Public release provenance
+
+On 2026-09-25, [GitHub Actions run 36177634848](https://github.com/grisheet/personal-quant-research/actions/runs/36177634848)
+passed on both `ubuntu-latest` and `macos-latest` for publication commit
+`3f140e3685bef64609d436adb1c2b8b30b5dcf60`. Both jobs passed frozen dependency installation,
+Ruff lint/formatting, mypy, pytest with the 80% coverage gate, wheel/source builds, the offline demo,
+and artifact verification. Subsequent publication edits affect documentation only.
+
+The public repository is https://github.com/grisheet/personal-quant-research. Browser publication
+created new Git commit IDs. A file comparison against build commit
+`09ab1eeba90916c4564b8e8ce0d96286440d6c4d` found identical implementation and report files,
+except that the browser editor added a newline to eleven otherwise empty `__init__.py` files.
+Publication documentation is updated separately. The report still identifies the original source
+commit `1692234058e395e929e78a887ee2849b2a8a905d` that generated its outputs.
+
+The release asset `personal-quant-research.bundle` preserves the original eight build commits and
+original build tag. To inspect that exact history without confusing it with the public release tag:
+
+```bash
+git clone personal-quant-research.bundle original-build
+git -C original-build checkout 1692234058e395e929e78a887ee2849b2a8a905d
+```
+
 ## What the tests establish
 
 | Invariant | Evidence |
@@ -53,7 +76,6 @@ need not match a fresh run after another Git commit; compare numeric outputs and
 - Live API entitlement, service availability or exhaustive SEC taxonomy coverage.
 - Real trading fills, achievable returns, capacity, alpha or statistical significance.
 - Independence of a manually inspected holdout.
-- macOS/remote GitHub CI success before an authenticated push.
 - Browser rendering on every screen size; use the included HTML and print stylesheet locally.
 
 ## Reproduce
